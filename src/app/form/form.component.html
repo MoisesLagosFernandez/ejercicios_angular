@@ -1,0 +1,14 @@
+<input type="text" placeholder="Ingresar nombre" class="form-control" #name>
+<button class="btn btn-primary mt-3" (click)="mostrar_en_consola(name.value)">Mostrar en consola</button>
+<div class="alert alert-success mt-3" *ngIf="openAlertSuccess">
+   Se ha enviado el mensaje <br>
+   <button class="btn btn-success mt-3" (click)="openAlertSuccess = !openAlertSuccess">cerrar</button>
+  </div>
+<div class="alert alert-danger mt-3" *ngIf="openAlertDanger">
+  No se ha enviado el mensaje, favor ingrese un valor <br>
+  <button class="btn btn-danger mt-3" (click)="openAlertDanger = !openAlertDanger">cerrar</button>
+</div>
+
+
+
+

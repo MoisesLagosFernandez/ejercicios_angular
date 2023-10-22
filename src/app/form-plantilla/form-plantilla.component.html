@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-body">
+    <form action="" (ngSubmit)="procesar()" #formContact="ngForm">
+      <div class="mb-2">
+        <label for="form-label">Nombre:</label>
+        <input type="text" class="form-control"   name="nombre" placeholder="Ingrese su nombre"[(ngModel)]="persona.nombre" #name="ngModel" required>
+        <div class="alert alert-danger" *ngIf="!name.valid && !name.pristine">El nombres es obligatorio</div>
+      </div>
+      <div>
+        <label for="form-label">Edad:</label>
+        <input type="number" class="form-control" name="edad" placeholder="Ingrese su edad" [(ngModel)]="persona.edad" #age="ngModel" required>
+        <div class="alert alert-danger" *ngIf="!age.valid && !age.pristine">La edad es obligatoria</div>
+      </div>
+      <div class="mt-3">
+        <button class="btn btn-success" [disabled]="formContact.invalid">Enviar</button>
+      </div>
+    </form>
+
+    {{persona | json}}
+
+  </div>
+</div>
+
+<span>se debe importar forms module en app.module para poder usar ngmodule</span>
+
+<br>
+
+<span>Muestra el valor de #name="ngModel" para el requered</span>
+
+<br>
+
+{{name.valid }}
+
+<br>
+
+<span>estado del formulario</span>
+
+<br>
+
+
+{{formContact.valid}}
+
