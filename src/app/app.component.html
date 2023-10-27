@@ -2,8 +2,13 @@
 <div class="container">
   <h1>Componente principal</h1>
 
-  <input type="text" class="form-control" [(ngModel)]="title">
+  <!-- Comunicacion entre componente padre he hijo -->
+  <!-- <input type="text" class="form-control" [(ngModel)]="title"> -->
+  <!-- <app-childern title2="texto de prueba comunicacion entre componentes" [title]="title" (titleChange)="title=$event "></app-childern>  -->
+  <!-- <app-childern [(title)]="title"></app-childern> -->
 
-  <app-childern title2="texto de prueba comunicacion entre componentes" [title]="title"></app-childern>
+  <!-- Comunicacion de componentes por medio de un service -->
+  <app-add-msj></app-add-msj>
+  <app-list-msj></app-list-msj>
 </div>
 

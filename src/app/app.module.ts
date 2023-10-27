@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SwitchComponent } from './switch/switch.component';
 import { FormReactivoComponent } from './form-reactivo/form-reactivo.component';
 import { ChildernComponent } from './childern/childern.component';
+import { AddMsjComponent } from './add-msj/add-msj.component';
+import { ListMsjComponent } from './list-msj/list-msj.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { ChildernComponent } from './childern/childern.component';
     FormPlantillaComponent,
     SwitchComponent,
     FormReactivoComponent,
-    ChildernComponent
+    ChildernComponent,
+    AddMsjComponent,
+    ListMsjComponent
   ],
   imports: [
     BrowserModule,

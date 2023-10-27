@@ -13,7 +13,6 @@ export class ChildernComponent {
 
 
   emitirCambios () {
-    console.log("cambio el titulo");
     this.titleChange.emit(this.title)
   }
 
