@@ -15,6 +15,7 @@ import { AddMsjComponent } from './add-msj/add-msj.component';
 import { ListMsjComponent } from './list-msj/list-msj.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';
+import { ParametrosComponent } from './parametros/parametros.component';
 
 
 
@@ -31,6 +32,12 @@ const routes:Routes = [
     path:'AddMsj',
     component: AddMsjComponent
   },
+
+  {
+    path:'parametros/:parametro',
+    component: ParametrosComponent
+  },
+
   {
     path: '**',
     component:PaginaNoEncontradaComponent
@@ -50,7 +57,8 @@ const routes:Routes = [
     ChildernComponent,
     AddMsjComponent,
     ListMsjComponent,
-    PaginaNoEncontradaComponent
+    PaginaNoEncontradaComponent,
+    ParametrosComponent
   ],
   imports: [
     BrowserModule,
