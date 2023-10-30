@@ -14,6 +14,7 @@ import { ChildernComponent } from './childern/childern.component';
 import { AddMsjComponent } from './add-msj/add-msj.component';
 import { ListMsjComponent } from './list-msj/list-msj.component';
 import { RouterModule, Routes } from '@angular/router';
+import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';
 
 
 
@@ -21,6 +22,18 @@ const routes:Routes = [
   {
     path:'botones',
     component: BotonerComponent
+  },
+  {
+    path:'Bucles',
+    component: BuclesComponent
+  },
+  {
+    path:'AddMsj',
+    component: AddMsjComponent
+  },
+  {
+    path: '**',
+    component:PaginaNoEncontradaComponent
   }
 ]
 
@@ -36,7 +49,8 @@ const routes:Routes = [
     FormReactivoComponent,
     ChildernComponent,
     AddMsjComponent,
-    ListMsjComponent
+    ListMsjComponent,
+    PaginaNoEncontradaComponent
   ],
   imports: [
     BrowserModule,
