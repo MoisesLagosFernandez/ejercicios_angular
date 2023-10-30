@@ -13,6 +13,17 @@ import { FormReactivoComponent } from './form-reactivo/form-reactivo.component';
 import { ChildernComponent } from './childern/childern.component';
 import { AddMsjComponent } from './add-msj/add-msj.component';
 import { ListMsjComponent } from './list-msj/list-msj.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+
+const routes:Routes = [
+  {
+    path:'botones',
+    component: BotonerComponent
+  }
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +41,9 @@ import { ListMsjComponent } from './list-msj/list-msj.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule //PARA TRABAJAR CON FORMULARIOS REACTIVOS
+    ReactiveFormsModule, //PARA TRABAJAR CON FORMULARIOS REACTIVOS
+    RouterModule.forRoot(routes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]
