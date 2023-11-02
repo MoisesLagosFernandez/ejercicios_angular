@@ -16,13 +16,25 @@ import { ListMsjComponent } from './list-msj/list-msj.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PaginaNoEncontradaComponent } from './pagina-no-encontrada/pagina-no-encontrada.component';
 import { ParametrosComponent } from './parametros/parametros.component';
+import { RutaHijaComponent } from './ruta-hija/ruta-hija.component';
+import { RutaHija2Component } from './ruta-hija2/ruta-hija2.component';
 
 
 
 const routes:Routes = [
   {
     path:'botones',
-    component: BotonerComponent
+    component: BotonerComponent,
+    children: [
+      {
+        path: '',
+        component: RutaHijaComponent
+      },
+      {
+        path: '',
+        component: RutaHija2Component
+      }
+    ]
   },
   {
     path:'Bucles',
@@ -58,7 +70,9 @@ const routes:Routes = [
     AddMsjComponent,
     ListMsjComponent,
     PaginaNoEncontradaComponent,
-    ParametrosComponent
+    ParametrosComponent,
+    RutaHijaComponent,
+    RutaHija2Component
   ],
   imports: [
     BrowserModule,
